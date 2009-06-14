@@ -365,15 +365,16 @@ namespace Wlipper
         }
 
         /// <summary>
-        /// Removes all newlines and cuts from both sides to length given via preferences.
+        /// Removes all newlines and tabulators and cuts from both sides to length given via preferences.
         /// </summary>
         private string PrepareTextForToolStripMenuItem(string text)
         {
-            // Removing newlines
-            string[] newlines = new string[3];
+            // Removing newlines and tabulators
+            string[] newlines = new string[4];
             newlines[0] = "\r\n";
             newlines[1] = "\r";
             newlines[2] = "\n";
+            newlines[3] = "\t";
             string replacement = SpecialCharacters.WHITESPACE;
             foreach (string newline in newlines)
             {
