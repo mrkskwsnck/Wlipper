@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Wlipper</RootNamespace>
     <AssemblyName>Wlipper</AssemblyName>
-    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ApplicationIcon>Gfx\Wlipper.ICO</ApplicationIcon>
     <IsWebBootstrapper>true</IsWebBootstrapper>
@@ -99,7 +99,6 @@
       <DependentUpon>WlipperForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
-    <None Include="Gfx\Copyleft_16.txt" />
     <None Include="License.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

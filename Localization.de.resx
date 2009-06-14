@@ -120,4 +120,13 @@
   <data name="EMPTY" xml:space="preserve">
     <value>&lt;LEER&gt;</value>
   </data>
+  <data name="NOREADME" xml:space="preserve">
+    <value>Die Dokumentation konnte nicht aus der Programm-Ressource geöffnet werden!</value>
+  </data>
+  <data name="FAILURE" xml:space="preserve">
+    <value>Schwerwiegender Fehler</value>
+  </data>
+  <data name="NOSAVE" xml:space="preserve">
+    <value>Die Präferenzen konnten nicht gespeichert werden!</value>
+  </data>
 </root>

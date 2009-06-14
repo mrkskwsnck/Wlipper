@@ -309,8 +309,8 @@
   <data name="numericUpDownHistory.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="buttonCancel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>183, 183</value>
+  <data name="&gt;&gt;toolStripMenuItemPreferences.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="buttonOk.Text" xml:space="preserve">
     <value>OK</value>
@@ -339,17 +339,11 @@
   <data name="groupBoxLimits.Text" xml:space="preserve">
     <value>History limits</value>
   </data>
-  <data name="&gt;&gt;contextMenuStrip.Name" xml:space="preserve">
-    <value>contextMenuStrip</value>
-  </data>
   <data name="numericUpDownHistory.Location" type="System.Drawing.Point, System.Drawing">
     <value>177, 19</value>
   </data>
   <data name="&gt;&gt;numericUpDownEntry.Type" xml:space="preserve">
     <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator1.Name" xml:space="preserve">
-    <value>toolStripSeparator1</value>
   </data>
   <data name="&gt;&gt;labelTooltip.Parent" xml:space="preserve">
     <value>groupBoxLimits</value>
@@ -372,8 +366,8 @@
   <data name="&gt;&gt;numericUpDownHistory.Name" xml:space="preserve">
     <value>numericUpDownHistory</value>
   </data>
-  <data name="&gt;&gt;toolStripSeparator2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;toolStripSeparator1.Name" xml:space="preserve">
+    <value>toolStripSeparator1</value>
   </data>
   <data name="checkBoxFormatted.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -393,8 +387,8 @@
   <data name="labelEntry.Size" type="System.Drawing.Size, System.Drawing">
     <value>98, 13</value>
   </data>
-  <data name="toolStripMenuItemHelp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>222, 22</value>
+  <data name="&gt;&gt;contextMenuStrip.Name" xml:space="preserve">
+    <value>contextMenuStrip</value>
   </data>
   <data name="&gt;&gt;labelTooltip.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -414,17 +408,17 @@
   <data name="&gt;&gt;labelHistory.Name" xml:space="preserve">
     <value>labelHistory</value>
   </data>
-  <data name="toolStripMenuItemHelp.Text" xml:space="preserve">
-    <value>Help</value>
+  <data name="buttonCancel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>183, 183</value>
   </data>
   <data name="&gt;&gt;labelEntry.Parent" xml:space="preserve">
     <value>groupBoxLimits</value>
   </data>
+  <data name="&gt;&gt;reregisterToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="buttonCancel.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
-  </data>
-  <data name="&gt;&gt;labelHistory.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;labelEntry.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -432,8 +426,8 @@
   <data name="&gt;&gt;labelEntry.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>219, 6</value>
+  <data name="toolStripMenuItemHelp.Text" xml:space="preserve">
+    <value>Help</value>
   </data>
   <data name="&gt;&gt;labelTooltip.Name" xml:space="preserve">
     <value>labelTooltip</value>
@@ -478,6 +472,9 @@
     <value>5</value>
   </data>
   <data name="reregisterToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>222, 22</value>
+  </data>
+  <data name="toolStripMenuItemHelp.Size" type="System.Drawing.Size, System.Drawing">
     <value>222, 22</value>
   </data>
   <data name="&gt;&gt;toolStripSeparator1.Type" xml:space="preserve">
@@ -555,9 +552,6 @@
   <data name="&gt;&gt;buttonOk.Name" xml:space="preserve">
     <value>buttonOk</value>
   </data>
-  <data name="&gt;&gt;reregisterToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="groupBoxLimits.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 12</value>
   </data>
@@ -575,6 +569,12 @@
   </data>
   <data name="groupBoxLimits.Size" type="System.Drawing.Size, System.Drawing">
     <value>246, 109</value>
+  </data>
+  <data name="&gt;&gt;labelHistory.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="labelEntry.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -595,9 +595,6 @@
     <value>toolStripMenuItemQuit</value>
   </data>
   <data name="&gt;&gt;toolStripMenuItemClear.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStripMenuItemPreferences.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;numericUpDownHistory.Parent" xml:space="preserve">
@@ -771,6 +768,9 @@
         AAD8AAAAAD8AAPwAAAAAPwAA/AAAAAA/AAD8AAAAAD8AAPwAAAAAPwAA/AAAAAA/AAD8AAAAAD8AAPwA
         AAAAPwAA/AAAAAA/AAD8AAAAAD8AAP//AAD//wAA//8AAP//AAA=
 </value>
+  </data>
+  <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>219, 6</value>
   </data>
   <data name="numericUpDownTooltip.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
