@@ -1,0 +1,1 @@
+- Try WM_DRAWCLIPBOARD or a different event message for being informed about clipboard changes in the future.
