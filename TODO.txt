@@ -1,9 +1,6 @@
 - Try WM_DRAWCLIPBOARD or a different event message for being informed about clipboard changes in the future.
 - Old certificate expired
-- Language resources not linked permanently
-- Implement RMB to LMB
-- Mention two buttons mouse in requirements list
-- Cut off tail of license file 
+
 - Turn into a single instance only application
 - Add notification about updates
-- Complete the file listing with languages added in the read me file
+- Fix unlimited adding of new entries

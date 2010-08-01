@@ -3,6 +3,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.IO;
 using System.Diagnostics;
+using System.Reflection;
 
 namespace Wlipper
 {
@@ -298,6 +299,18 @@ namespace Wlipper
             RegisterWindowToChain();
         }
 
+        private void notifyIcon_MouseUp(object sender, MouseEventArgs e)
+        {
+            switch (e.Button)
+            { 
+                case MouseButtons.Left:
+                    // Handle contextmenu with left mouse click: http://blog.xploiter.com/c-and-aspnet/need-to-left-click-on-a-notifyicon/
+                    MethodInfo mi = typeof(NotifyIcon).GetMethod("ShowContextMenu", BindingFlags.Instance | BindingFlags.NonPublic);
+                    mi.Invoke(notifyIcon, null);
+                    break;
+            }
+        }
+
         #endregion
 
         #region Other methods
@@ -454,6 +467,7 @@ namespace Wlipper
             catch
             {
                 // Temporary file can't be deleted because of still being used by another process
+                // Or the file was never been created
             }
         }
 
