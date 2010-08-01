@@ -316,14 +316,79 @@ namespace Wlipper
         #region Other methods
 
         /// <summary>
+        /// Comparing two format arrays with content from clipboard
+        /// </summary>
+        /// <param name="alreadyRetrieved">TRUE if last and new item both are identical, FALSE if not</param>
+        /// <param name="lastItem">Array containing several content formats of last retrieved item</param>
+        /// <param name="newItem">Array containing several content formats of new retrieved item</param>
+        private void BothHaveIdenticalContentAndFormats(out bool alreadyRetrieved, object[] lastItem, object[] newItem)
+        {
+            // If the number of formats is different they cant't be equal
+            if (lastItem.Length != newItem.Length)
+            {
+                alreadyRetrieved = false;
+            }
+            else
+            {
+                // Check each format for equality
+                bool bothAreEqual = false;
+
+                for (int i = 0; i < lastItem.Length; i++)
+                {
+                    if (null != lastItem[i] && null != newItem[i])
+                    {
+                        if (lastItem[i].Equals(newItem[i]))
+                        {
+                            bothAreEqual = true;
+                        }
+                        else
+                        {
+                            bothAreEqual = false;
+                            break;
+                        }
+                    }
+                    else if (null != lastItem[i] && null == newItem[i])
+                    {
+                        bothAreEqual = false;
+                    }
+                    else if (null == lastItem[i] && null != newItem[i])
+                    {
+                        bothAreEqual = false;
+                    }
+
+                    // Do not check other formats for equality if not preserving text formatting
+                    if (!Formatted && i == 0)
+                    {
+                        break;
+                    }
+                }
+
+                alreadyRetrieved = bothAreEqual;
+            }
+        }
+
+        /// <summary>
         /// For processing the clipboard after the appropriate event occurred.
         /// </summary>
         private void MakeItSo()
         {
             // Processing new clipboard's text content
-            object[] objectFormats = Clipboarding.GetClipboardTextContent();
-            string unformatted = objectFormats[0] as string;
+            object[] newObjectFormats = Clipboarding.GetClipboardTextContent();
+            object[] lastObjectFormats = (object[])contextMenuStrip.Items[2].Tag;   // Formats of last retrieved clipboard content
 
+            // Do not capture new clipboard history item if it is the same like the last one
+            bool alreadyRetrieved = false;
+            if(null != lastObjectFormats)
+            {
+                BothHaveIdenticalContentAndFormats(out alreadyRetrieved, lastObjectFormats, newObjectFormats);
+            }
+            if(alreadyRetrieved)
+            {
+                return;
+            }
+            // ---
+
+            string unformatted = newObjectFormats[0] as string;
             if (unformatted != null)
             {
                 // Set a new clipboard object without formatting information
@@ -331,7 +396,7 @@ namespace Wlipper
                 if (!Formatted)
                 {
                     InsertingHistory = true;
-                    Clipboarding.SetClipboardTextContent(Formatted, objectFormats);
+                    Clipboarding.SetClipboardTextContent(Formatted, newObjectFormats);
                 }
                 else
                     InsertingHistory = true;
@@ -339,7 +404,7 @@ namespace Wlipper
                 if (InsertingHistory)
                 {
                     ToolStripMenuItem toolStripMenuItem = new ToolStripMenuItem(PrepareTextForToolStripMenuItem(unformatted), null, ClipboardMenuItem_Click);
-                    toolStripMenuItem.Tag = objectFormats;
+                    toolStripMenuItem.Tag = newObjectFormats;
                     toolStripMenuItem.ToolTipText = PrepareTextForToolTipText(unformatted);
                     contextMenuStrip.Items.Insert(2, toolStripMenuItem);
                 }

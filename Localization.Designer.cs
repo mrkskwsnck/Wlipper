@@ -79,6 +79,15 @@ namespace Wlipper {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die An instance of {0} {1} is already running! ähnelt.
+        /// </summary>
+        internal static string INSTANCE_RUNNING {
+            get {
+                return ResourceManager.GetString("INSTANCE_RUNNING", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Unable to open documentation file from assembly resource! ähnelt.
         /// </summary>
         internal static string NOREADME {

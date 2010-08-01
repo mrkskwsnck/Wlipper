@@ -3,8 +3,6 @@ When updating the version number, remember:
 2x ReadMe.htm
 ---
 
-- Try WM_DRAWCLIPBOARD or a different event message for being informed about clipboard changes in the future.
-- Old certificate expired
-
-- Add notification about updates
-- Fix unlimited adding of new entries
+WM_DRAWCLIPBOARD
+certificate
+Add notification about updates

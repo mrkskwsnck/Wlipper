@@ -123,6 +123,10 @@
   <data name="FAILURE" xml:space="preserve">
     <value>Catastrophic failure</value>
   </data>
+  <data name="INSTANCE_RUNNING" xml:space="preserve">
+    <value>An instance of {0} {1} is already running!</value>
+    <comment>{0} = Name, {1} = Version</comment>
+  </data>
   <data name="NOREADME" xml:space="preserve">
     <value>Unable to open documentation file from assembly resource!</value>
   </data>

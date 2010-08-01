@@ -129,4 +129,8 @@
   <data name="NOSAVE" xml:space="preserve">
     <value>Die Präferenzen konnten nicht gespeichert werden!</value>
   </data>
+  <data name="INSTANCE_RUNNING" xml:space="preserve">
+    <value>Eine Instanz von {0} {1} wird bereits ausgeführt!</value>
+    <comment>{0} = Name, {1} = Version</comment>
+  </data>
 </root>

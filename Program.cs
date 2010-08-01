@@ -14,7 +14,8 @@ namespace Wlipper
         {
             // Single instance only allowed
             bool firstInstance = false;
-            Mutex mutex = new Mutex(false, Application.ProductName, out firstInstance);
+            string mutexName = string.Format("{0} {1}", Application.ProductName, Application.ProductVersion);
+            Mutex mutex = new Mutex(false, mutexName, out firstInstance);
 
             if (firstInstance)
             {
@@ -25,6 +26,7 @@ namespace Wlipper
             }
             else
             {
+                MessageBox.Show(string.Format(Localization.INSTANCE_RUNNING, Application.ProductName, Application.ProductVersion), Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 Application.Exit();
             }
         }
