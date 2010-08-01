@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace Wlipper
 {
@@ -11,10 +12,21 @@ namespace Wlipper
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            new WlipperForm();
-            Application.Run();
+            // Single instance only allowed
+            bool firstInstance = false;
+            Mutex mutex = new Mutex(false, Application.ProductName, out firstInstance);
+
+            if (firstInstance)
+            {
+                Application.EnableVisualStyles();
+                Application.SetCompatibleTextRenderingDefault(false);
+                new WlipperForm();
+                Application.Run();
+            }
+            else
+            {
+                Application.Exit();
+            }
         }
     }
 }

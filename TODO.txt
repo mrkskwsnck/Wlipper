@@ -1,6 +1,10 @@
+When updating the version number, remember:
+2x AssemblyInfo.cs
+2x ReadMe.htm
+---
+
 - Try WM_DRAWCLIPBOARD or a different event message for being informed about clipboard changes in the future.
 - Old certificate expired
 
-- Turn into a single instance only application
 - Add notification about updates
 - Fix unlimited adding of new entries
