@@ -104,5 +104,23 @@ namespace Wlipper {
                 return ResourceManager.GetString("NOSAVE", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die A new version of Wlipper is available. New version: {0}, current version: {1} - Do you want to visit the project web site for download? ähnelt.
+        /// </summary>
+        internal static string UPDATE_AVAILABLE {
+            get {
+                return ResourceManager.GetString("UPDATE_AVAILABLE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Checking for update failed! ähnelt.
+        /// </summary>
+        internal static string UPDATE_FAIL {
+            get {
+                return ResourceManager.GetString("UPDATE_FAIL", resourceCulture);
+            }
+        }
     }
 }

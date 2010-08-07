@@ -40,6 +40,7 @@
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripMenuItemPreferences = new System.Windows.Forms.ToolStripMenuItem();
             this.reregisterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemUpdate = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemHelp = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripMenuItemQuit = new System.Windows.Forms.ToolStripMenuItem();
@@ -64,72 +65,80 @@
             // 
             // notifyIcon
             // 
-            this.notifyIcon.ContextMenuStrip = this.contextMenuStrip;
             resources.ApplyResources(this.notifyIcon, "notifyIcon");
+            this.notifyIcon.ContextMenuStrip = this.contextMenuStrip;
             this.notifyIcon.MouseUp += new System.Windows.Forms.MouseEventHandler(this.notifyIcon_MouseUp);
             // 
             // contextMenuStrip
             // 
+            resources.ApplyResources(this.contextMenuStrip, "contextMenuStrip");
             this.contextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItemClear,
             this.toolStripSeparator3,
             this.toolStripSeparator2,
             this.toolStripMenuItemPreferences,
             this.reregisterToolStripMenuItem,
+            this.toolStripMenuItemUpdate,
             this.toolStripMenuItemHelp,
             this.toolStripSeparator1,
             this.toolStripMenuItemQuit});
             this.contextMenuStrip.Name = "contextMenuStrip";
             this.contextMenuStrip.ShowImageMargin = false;
-            resources.ApplyResources(this.contextMenuStrip, "contextMenuStrip");
             // 
             // toolStripMenuItemClear
             // 
-            this.toolStripMenuItemClear.Name = "toolStripMenuItemClear";
             resources.ApplyResources(this.toolStripMenuItemClear, "toolStripMenuItemClear");
+            this.toolStripMenuItemClear.Name = "toolStripMenuItemClear";
             this.toolStripMenuItemClear.Click += new System.EventHandler(this.toolStripMenuItemClear_Click);
             // 
             // toolStripSeparator3
             // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
             resources.ApplyResources(this.toolStripSeparator3, "toolStripSeparator3");
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
             // 
             // toolStripSeparator2
             // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
             resources.ApplyResources(this.toolStripSeparator2, "toolStripSeparator2");
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
             // 
             // toolStripMenuItemPreferences
             // 
-            this.toolStripMenuItemPreferences.Name = "toolStripMenuItemPreferences";
             resources.ApplyResources(this.toolStripMenuItemPreferences, "toolStripMenuItemPreferences");
+            this.toolStripMenuItemPreferences.Name = "toolStripMenuItemPreferences";
             this.toolStripMenuItemPreferences.Click += new System.EventHandler(this.toolStripMenuItemPreferences_Click);
             // 
             // reregisterToolStripMenuItem
             // 
-            this.reregisterToolStripMenuItem.Name = "reregisterToolStripMenuItem";
             resources.ApplyResources(this.reregisterToolStripMenuItem, "reregisterToolStripMenuItem");
+            this.reregisterToolStripMenuItem.Name = "reregisterToolStripMenuItem";
             this.reregisterToolStripMenuItem.Click += new System.EventHandler(this.ReregisterToolStripMenuItemClick);
+            // 
+            // toolStripMenuItemUpdate
+            // 
+            resources.ApplyResources(this.toolStripMenuItemUpdate, "toolStripMenuItemUpdate");
+            this.toolStripMenuItemUpdate.Name = "toolStripMenuItemUpdate";
+            this.toolStripMenuItemUpdate.Click += new System.EventHandler(this.toolStripMenuItemUpdate_Click);
             // 
             // toolStripMenuItemHelp
             // 
-            this.toolStripMenuItemHelp.Name = "toolStripMenuItemHelp";
             resources.ApplyResources(this.toolStripMenuItemHelp, "toolStripMenuItemHelp");
+            this.toolStripMenuItemHelp.Name = "toolStripMenuItemHelp";
             this.toolStripMenuItemHelp.Click += new System.EventHandler(this.toolStripMenuItemHelp_Click);
             // 
             // toolStripSeparator1
             // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
             resources.ApplyResources(this.toolStripSeparator1, "toolStripSeparator1");
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
             // 
             // toolStripMenuItemQuit
             // 
-            this.toolStripMenuItemQuit.Name = "toolStripMenuItemQuit";
             resources.ApplyResources(this.toolStripMenuItemQuit, "toolStripMenuItemQuit");
+            this.toolStripMenuItemQuit.Name = "toolStripMenuItemQuit";
             this.toolStripMenuItemQuit.Click += new System.EventHandler(this.toolStripMenuItemQuit_Click);
             // 
             // groupBoxLimits
             // 
+            resources.ApplyResources(this.groupBoxLimits, "groupBoxLimits");
             this.groupBoxLimits.Controls.Add(this.numericUpDownTooltip);
             this.groupBoxLimits.Controls.Add(this.labelTooltip);
             this.groupBoxLimits.Controls.Add(this.numericUpDownHistory);
@@ -137,7 +146,6 @@
             this.groupBoxLimits.Controls.Add(this.numericUpDownEntry);
             this.groupBoxLimits.Controls.Add(this.labelHistory);
             this.groupBoxLimits.ForeColor = System.Drawing.SystemColors.ControlText;
-            resources.ApplyResources(this.groupBoxLimits, "groupBoxLimits");
             this.groupBoxLimits.Name = "groupBoxLimits";
             this.groupBoxLimits.TabStop = false;
             // 
@@ -221,9 +229,9 @@
             // 
             // groupBoxBehavior
             // 
+            resources.ApplyResources(this.groupBoxBehavior, "groupBoxBehavior");
             this.groupBoxBehavior.Controls.Add(this.checkBoxFormatted);
             this.groupBoxBehavior.ForeColor = System.Drawing.SystemColors.ControlText;
-            resources.ApplyResources(this.groupBoxBehavior, "groupBoxBehavior");
             this.groupBoxBehavior.Name = "groupBoxBehavior";
             this.groupBoxBehavior.TabStop = false;
             // 
@@ -237,8 +245,8 @@
             // 
             // buttonCancel
             // 
-            this.buttonCancel.Cursor = System.Windows.Forms.Cursors.Default;
             resources.ApplyResources(this.buttonCancel, "buttonCancel");
+            this.buttonCancel.Cursor = System.Windows.Forms.Cursors.Default;
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.UseVisualStyleBackColor = true;
             this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
@@ -298,6 +306,7 @@
         private System.Windows.Forms.NumericUpDown numericUpDownTooltip;
         private System.Windows.Forms.GroupBox groupBoxBehavior;
         private System.Windows.Forms.CheckBox checkBoxFormatted;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemUpdate;
     }
 }
 

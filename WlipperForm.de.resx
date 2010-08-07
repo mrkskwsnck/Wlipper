@@ -119,25 +119,25 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="toolStripMenuItemClear.Size" type="System.Drawing.Size, System.Drawing">
-    <value>178, 22</value>
+    <value>185, 22</value>
   </data>
   <data name="toolStripMenuItemClear.Text" xml:space="preserve">
     <value>Verlauf leeren</value>
   </data>
   <data name="toolStripSeparator3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>175, 6</value>
+    <value>182, 6</value>
   </data>
   <data name="toolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>175, 6</value>
+    <value>182, 6</value>
   </data>
   <data name="toolStripMenuItemPreferences.Size" type="System.Drawing.Size, System.Drawing">
-    <value>178, 22</value>
+    <value>185, 22</value>
   </data>
   <data name="toolStripMenuItemPreferences.Text" xml:space="preserve">
     <value>Präferenzen</value>
   </data>
   <data name="reregisterToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>178, 22</value>
+    <value>185, 22</value>
   </data>
   <data name="reregisterToolStripMenuItem.Text" xml:space="preserve">
     <value>Zwischenablage abrufen</value>
@@ -145,23 +145,29 @@
   <data name="reregisterToolStripMenuItem.ToolTipText" xml:space="preserve">
     <value>Benutzen Sie dies, falls Wlipper neue Elemente der Zwischanablage nicht aufnimmt.</value>
   </data>
+  <data name="toolStripMenuItemUpdate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>185, 22</value>
+  </data>
+  <data name="toolStripMenuItemUpdate.Text" xml:space="preserve">
+    <value>Auf Aktualisierung prüfen</value>
+  </data>
   <data name="toolStripMenuItemHelp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>178, 22</value>
+    <value>185, 22</value>
   </data>
   <data name="toolStripMenuItemHelp.Text" xml:space="preserve">
     <value>Hilfe</value>
   </data>
   <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>175, 6</value>
+    <value>182, 6</value>
   </data>
   <data name="toolStripMenuItemQuit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>178, 22</value>
+    <value>185, 22</value>
   </data>
   <data name="toolStripMenuItemQuit.Text" xml:space="preserve">
     <value>Beenden</value>
   </data>
   <data name="contextMenuStrip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>179, 132</value>
+    <value>186, 176</value>
   </data>
   <data name="notifyIcon.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

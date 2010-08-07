@@ -4,6 +4,8 @@ using System.Windows.Forms;
 using System.IO;
 using System.Diagnostics;
 using System.Reflection;
+using System.Net;
+using System.Xml;
 
 namespace Wlipper
 {
@@ -160,6 +162,7 @@ namespace Wlipper
             InitializeDocument();
             LoadPreferences();
             RegisterWindowToChain();
+            CheckForUpdate();
         }
 
         #endregion
@@ -308,6 +311,16 @@ namespace Wlipper
                     MethodInfo mi = typeof(NotifyIcon).GetMethod("ShowContextMenu", BindingFlags.Instance | BindingFlags.NonPublic);
                     mi.Invoke(notifyIcon, null);
                     break;
+            }
+        }
+
+        private void toolStripMenuItemUpdate_Click(object sender, EventArgs e)
+        {
+            bool update = CheckForUpdate();
+            // If was not able to check for update
+            if (!update)
+            {
+                MessageBox.Show(Localization.UPDATE_FAIL, Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -610,6 +623,48 @@ namespace Wlipper
             else
                 Histories = (uint)difference;
             return Histories;
+        }
+
+        /// <summary>
+        /// Check for update availability and pop up a message if so.
+        /// </summary>
+        private bool CheckForUpdate()
+        {
+            try
+            {
+                // Fetch XML document
+                HttpWebRequest request = (HttpWebRequest)WebRequest.Create(Naming.UPDATE_URL);
+                request.UserAgent = string.Format("{0} {1}", Application.ProductName, Application.ProductVersion);
+                HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+                StreamReader responseReader = new StreamReader(response.GetResponseStream(), Encoding.UTF8);
+                string xmlDocument = responseReader.ReadToEnd();
+                responseReader.Close();
+
+                // Handle XML document
+                XmlDocument xmlDom = new XmlDocument();
+                xmlDom.LoadXml(xmlDocument);
+                string version = xmlDom.GetElementsByTagName("version").Item(0).FirstChild.Value;
+
+                // Compare current version with new one
+                int comparison = Application.ProductVersion.CompareTo(version);
+                if (-1 == comparison)
+                {
+                    // Pop up a message
+                    DialogResult answer = MessageBox.Show(string.Format(Localization.UPDATE_AVAILABLE, version, Application.ProductVersion), Application.ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                    if (DialogResult.Yes == answer)
+                    {
+                        // Open a browser with the project page
+                        Process.Start(Naming.PROJECT_SITE);
+                    }
+                }
+            }
+            catch
+            { 
+                // The new version number cannot be retrieved
+                return false;
+            }
+
+            return true;
         }
 
         #endregion

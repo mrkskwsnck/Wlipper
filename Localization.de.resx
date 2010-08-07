@@ -133,4 +133,11 @@
     <value>Eine Instanz von {0} {1} wird bereits ausgeführt!</value>
     <comment>{0} = Name, {1} = Version</comment>
   </data>
+  <data name="UPDATE_AVAILABLE" xml:space="preserve">
+    <value>Eine neue Version von Wlipper ist verfügbar. Neue Version: {0}, derzeitige Version: {1} - Möchten Sie die Web-Seite des Projekts zum Download besuchen?</value>
+    <comment>{0} = new version, {1} = current version</comment>
+  </data>
+  <data name="UPDATE_FAIL" xml:space="preserve">
+    <value>Die Prüfung auf Aktualisierung ist fehlgeschlagen!</value>
+  </data>
 </root>

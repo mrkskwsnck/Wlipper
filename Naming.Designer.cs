@@ -79,11 +79,29 @@ namespace Wlipper {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die http://wlipper.sourceforge.net/ ähnelt.
+        /// </summary>
+        internal static string PROJECT_SITE {
+            get {
+                return ResourceManager.GetString("PROJECT_SITE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die ReadMe.htm ähnelt.
         /// </summary>
         internal static string README {
             get {
                 return ResourceManager.GetString("README", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die http://wlipper.sourceforge.net/wlipper.xml ähnelt.
+        /// </summary>
+        internal static string UPDATE_URL {
+            get {
+                return ResourceManager.GetString("UPDATE_URL", resourceCulture);
             }
         }
     }
