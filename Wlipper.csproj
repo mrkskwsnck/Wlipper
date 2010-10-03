@@ -110,6 +110,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Localization.pl.resx">
+      <DependentUpon>Localization.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WlipperForm.pl.resx">
+      <DependentUpon>WlipperForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="WlipperForm.resx">
       <DependentUpon>WlipperForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -152,7 +158,7 @@
       <LastGenOutput>Naming.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="ReadMe.htm">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="SpecialCharacters.resx">
       <Generator>ResXFileCodeGenerator</Generator>
