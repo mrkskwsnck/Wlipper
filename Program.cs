@@ -15,19 +15,19 @@ namespace Wlipper
             // Single instance only allowed
             bool firstInstance = false;
             string mutexName = string.Format("{0} {1}", Application.ProductName, Application.ProductVersion);
-            Mutex mutex = new Mutex(false, mutexName, out firstInstance);
-
-            if (firstInstance)
+            using (Mutex mutex = new Mutex(false, mutexName, out firstInstance))
             {
-                Application.EnableVisualStyles();
-                Application.SetCompatibleTextRenderingDefault(false);
-                new WlipperForm();
-                Application.Run();
-            }
-            else
-            {
-                MessageBox.Show(string.Format(Localization.INSTANCE_RUNNING, Application.ProductName, Application.ProductVersion), Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                Application.Exit();
+                if (firstInstance)
+                {
+                    Application.EnableVisualStyles();
+                    Application.SetCompatibleTextRenderingDefault(false);
+                    new WlipperForm();
+                    Application.Run();
+                }
+                else
+                {
+                    MessageBox.Show(string.Format(Localization.INSTANCE_RUNNING, Application.ProductName, Application.ProductVersion), Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
         }
     }
