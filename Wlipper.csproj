@@ -38,6 +38,7 @@
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>false</MapFileExtensions>
     <ProductName>Wlipper</ProductName>
+    <PublisherName>Wlipper</PublisherName>
     <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
     <ApplicationRevision>5</ApplicationRevision>
     <ApplicationVersion>3.5.8.5</ApplicationVersion>
