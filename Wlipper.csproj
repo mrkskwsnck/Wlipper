@@ -30,13 +30,16 @@
     <PublishUrl>http://localhost/Wlipper/</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Web</InstallFrom>
-    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateEnabled>false</UpdateEnabled>
     <UpdateMode>Foreground</UpdateMode>
     <UpdateInterval>7</UpdateInterval>
     <UpdateIntervalUnits>Days</UpdateIntervalUnits>
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
+    <ProductName>Wlipper</ProductName>
+    <PublisherName>Markus Kwaśnicki</PublisherName>
+    <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
     <ApplicationRevision>5</ApplicationRevision>
     <ApplicationVersion>3.5.8.5</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
@@ -120,9 +123,9 @@
       <DependentUpon>WlipperForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
-    <None Include="License.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+    <Content Include="License.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -140,12 +143,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Gfx\Wlipper.ICO" />
-    <Content Include="Gfx\WlipperBoxShot.png" />
-    <Content Include="TODO.txt" />
-    <Content Include="wlipper.xml">
+    <None Include="Gfx\Wlipper.ICO" />
+    <None Include="Gfx\WlipperBoxShot.png" />
+    <None Include="TODO.txt" />
+    <None Include="wlipper.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+    </None>
     <EmbeddedResource Include="Localization.de.resx">
       <DependentUpon>Localization.resx</DependentUpon>
     </EmbeddedResource>
@@ -200,6 +203,7 @@
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
