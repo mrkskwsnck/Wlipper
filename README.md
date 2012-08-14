@@ -13,4 +13,3 @@ Features
 * Requires Microsoft .NET Framework 3.5 for Microsoft Windows
 * Requires computer mouse with at least one button
 * Runs with Windows XP, Windows 2003, Windows Vista and Windows 7 so far
-* Update Notifications
