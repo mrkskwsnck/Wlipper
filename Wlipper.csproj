@@ -145,7 +145,6 @@
   <ItemGroup>
     <None Include="Gfx\Wlipper.ICO" />
     <None Include="Gfx\WlipperBoxShot.png" />
-    <None Include="TODO.txt" />
     <None Include="wlipper.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
