@@ -162,7 +162,7 @@ namespace Wlipper
             InitializeDocument();
             LoadPreferences();
             RegisterWindowToChain();
-            CheckForUpdate();
+            CheckForUpdate(false);
         }
 
         #endregion
@@ -628,7 +628,7 @@ namespace Wlipper
         /// <summary>
         /// Check for update availability and pop up a message if so.
         /// </summary>
-        private bool CheckForUpdate()
+        private bool CheckForUpdate(bool silent = true)
         {
             try
             {
@@ -656,6 +656,11 @@ namespace Wlipper
                         // Open a browser with the project page
                         Process.Start(Naming.PROJECT_SITE);
                     }
+                }
+                // Do not notify for no available updates while instantiating
+                else if(0 == comparison && silent)
+                {
+                    MessageBox.Show(Localization.NO_UPDATE_AVAILABLE, Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch

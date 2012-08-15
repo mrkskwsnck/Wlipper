@@ -140,4 +140,7 @@
   <data name="UPDATE_FAIL" xml:space="preserve">
     <value>Die Prüfung auf Aktualisierung ist fehlgeschlagen!</value>
   </data>
+  <data name="NO_UPDATE_AVAILABLE" xml:space="preserve">
+    <value>Du glücklicher! Wlipper ist aktuell.</value>
+  </data>
 </root>
