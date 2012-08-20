@@ -645,8 +645,12 @@ namespace Wlipper
                 xmlDom.LoadXml(xmlDocument);
                 string version = xmlDom.GetElementsByTagName("version").Item(0).FirstChild.Value;
 
-                // Compare current version with new one
-                int comparison = Application.ProductVersion.CompareTo(version);
+                // Compare local version with remote one
+                // Removing dots from version number and converting it to integer type for an easier comparison
+                int localVersion = Convert.ToInt32(Application.ProductVersion.Replace(".", ""));
+                int remoteVersion = Convert.ToInt32(version.Replace(".", ""));
+                int comparison = localVersion.CompareTo(remoteVersion);
+                // --
                 if (-1 == comparison)
                 {
                     // Pop up a message
