@@ -124,12 +124,12 @@
     <value>.htm</value>
   </data>
   <data name="PROJECT_SITE" xml:space="preserve">
-    <value>http://wlipper.sourceforge.net/</value>
+    <value>http://wlipper.kwasniccy.eu/</value>
   </data>
   <data name="README" xml:space="preserve">
     <value>ReadMe.htm</value>
   </data>
   <data name="UPDATE_URL" xml:space="preserve">
-    <value>http://wlipper.sourceforge.net/wlipper.xml</value>
+    <value>http://wlipper.kwasniccy.eu/wlipper.xml</value>
   </data>
 </root>
