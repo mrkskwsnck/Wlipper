@@ -113,8 +113,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Localization.es.resx">
+      <DependentUpon>Localization.resx</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Localization.pl.resx">
       <DependentUpon>Localization.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WlipperForm.es.resx">
+      <DependentUpon>WlipperForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WlipperForm.pl.resx">
       <DependentUpon>WlipperForm.cs</DependentUpon>
