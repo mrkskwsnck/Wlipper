@@ -133,6 +133,9 @@
   <data name="NOSAVE" xml:space="preserve">
     <value>Unable to save preferences!</value>
   </data>
+  <data name="NO_UPDATE_AVAILABLE" xml:space="preserve">
+    <value>Lucky you! Wlipper is up to date.</value>
+  </data>
   <data name="UPDATE_AVAILABLE" xml:space="preserve">
     <value>A new version of Wlipper is available. New version: {0}, current version: {1} - Do you want to visit the project web site for download?</value>
     <comment>{0} = new version, {1} = current version</comment>

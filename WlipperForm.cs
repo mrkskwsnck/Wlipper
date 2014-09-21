@@ -162,7 +162,7 @@ namespace Wlipper
             InitializeDocument();
             LoadPreferences();
             RegisterWindowToChain();
-            CheckForUpdate();
+            CheckForUpdate(false);
         }
 
         #endregion
@@ -628,7 +628,7 @@ namespace Wlipper
         /// <summary>
         /// Check for update availability and pop up a message if so.
         /// </summary>
-        private bool CheckForUpdate()
+        private bool CheckForUpdate(bool silent = true)
         {
             try
             {
@@ -645,8 +645,12 @@ namespace Wlipper
                 xmlDom.LoadXml(xmlDocument);
                 string version = xmlDom.GetElementsByTagName("version").Item(0).FirstChild.Value;
 
-                // Compare current version with new one
-                int comparison = Application.ProductVersion.CompareTo(version);
+                // Compare local version with remote one
+                // Removing dots from version number and converting it to integer type for an easier comparison
+                int localVersion = Convert.ToInt32(Application.ProductVersion.Replace(".", ""));
+                int remoteVersion = Convert.ToInt32(version.Replace(".", ""));
+                int comparison = localVersion.CompareTo(remoteVersion);
+                // --
                 if (-1 == comparison)
                 {
                     // Pop up a message
@@ -656,6 +660,11 @@ namespace Wlipper
                         // Open a browser with the project page
                         Process.Start(Naming.PROJECT_SITE);
                     }
+                }
+                // Do not notify for no available updates while instantiating
+                else if(0 == comparison && silent)
+                {
+                    MessageBox.Show(Localization.NO_UPDATE_AVAILABLE, Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch

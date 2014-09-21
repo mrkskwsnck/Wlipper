@@ -118,29 +118,29 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="EMPTY" xml:space="preserve">
-    <value>&lt;LEER&gt;</value>
-  </data>
-  <data name="NOREADME" xml:space="preserve">
-    <value>Die Dokumentation konnte nicht aus der Programm-Ressource geöffnet werden!</value>
+    <value>&lt;VACÍO&gt;</value>
   </data>
   <data name="FAILURE" xml:space="preserve">
-    <value>Schwerwiegender Fehler</value>
-  </data>
-  <data name="NOSAVE" xml:space="preserve">
-    <value>Die Präferenzen konnten nicht gespeichert werden!</value>
+    <value>Fallo catastrófico</value>
   </data>
   <data name="INSTANCE_RUNNING" xml:space="preserve">
-    <value>Eine Instanz von {0} {1} wird bereits ausgeführt!</value>
+    <value>¡El programa {0} {1} ya se está ejecutando!</value>
     <comment>{0} = Name, {1} = Version</comment>
   </data>
+  <data name="NOREADME" xml:space="preserve">
+    <value>¡No es posible abrir el documento desde un recurso ensamblado!</value>
+  </data>
+  <data name="NOSAVE" xml:space="preserve">
+    <value>¡No es posible guardar las preferencias!</value>
+  </data>
+  <data name="NO_UPDATE_AVAILABLE" xml:space="preserve">
+    <value>¡Qué suerte! Wlipper es hasta la fecha.</value>
+  </data>
   <data name="UPDATE_AVAILABLE" xml:space="preserve">
-    <value>Eine neue Version von Wlipper ist verfügbar. Neue Version: {0}, derzeitige Version: {1} - Möchten Sie die Web-Seite des Projekts zum Download besuchen?</value>
+    <value>Una nueva versión de Wlipper está disponible. Nueva versión: {0}, versión actual: {1} - ¿Quiere visitar la página web del proyecto para descargar el software?</value>
     <comment>{0} = new version, {1} = current version</comment>
   </data>
   <data name="UPDATE_FAIL" xml:space="preserve">
-    <value>Die Prüfung auf Aktualisierung ist fehlgeschlagen!</value>
-  </data>
-  <data name="NO_UPDATE_AVAILABLE" xml:space="preserve">
-    <value>Du glücklicher! Wlipper ist aktuell.</value>
+    <value>¡Fallo en la comprobación de actualizaciones!</value>
   </data>
 </root>
