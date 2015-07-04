@@ -1,6 +1,0 @@
-When updating the version number, remember:
-2x AssemblyInfo.cs
-2x ReadMe.htm
-1x wlipper.xml
-1x Publishing application
----
